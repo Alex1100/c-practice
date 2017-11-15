@@ -2,7 +2,7 @@
 
 /* copy input to output; 1st version */
 
-main(){
+int main(void){
   int c;
 
   c = getchar();

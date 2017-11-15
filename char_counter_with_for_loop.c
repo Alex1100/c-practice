@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main(){
+int main(void){
   double nc;
 
   for(nc = 0; getchar() != EOF; ++nc){
