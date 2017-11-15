@@ -6,6 +6,6 @@ main(){
   nc = 0;
   while(getchar() != EOF){
     ++nc;
-    printf("%1d\n", nc - 1);
+    printf("%ld\n", nc - 1);
   }
 }
