@@ -3,6 +3,7 @@
 
 int gettheline(char line[], int maxline);
 void copy(char to[], char from[]);
+int size(char *ptr);
 
 int main(void){
   int len;
@@ -20,10 +21,29 @@ int main(void){
   }
 
   if(max > 0){
-    printf("\n%s", longest);
+    printf("\nLINE IS: %s\bLENGTH IS: %d\n", longest, size(&longest[0]) - 1);
     return 0;
   }
 }
+
+int size(char *ptr){
+  //variable used to access the subsequent array elements.
+  int offset = 0;
+  //variable that counts the number of elements in your array
+  int count = 0;
+
+  //While loop that tests whether the end of the array has been reached
+  while (*(ptr + offset) != '\0')
+  {
+      //increment the count variable
+      ++count;
+      //advance to the next element of the array
+      ++offset;
+  }
+  //return the size of the array
+  return count;
+}
+
 
 int gettheline(char s[], int lim){
   int c, i;
