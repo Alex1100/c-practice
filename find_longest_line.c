@@ -33,12 +33,11 @@ int size(char *ptr){
   int count = 0;
 
   //While loop that tests whether the end of the array has been reached
-  while (*(ptr + offset) != '\0')
-  {
-      //increment the count variable
-      ++count;
-      //advance to the next element of the array
-      ++offset;
+  while (*(ptr + offset) != '\0'){
+    //increment the count variable
+    ++count;
+    //advance to the next element of the array
+    ++offset;
   }
   //return the size of the array
   return count;
