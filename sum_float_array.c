@@ -15,6 +15,9 @@ int main()
     sum = sum + vet[i];
   }
   
-  printf("\nTotal = %.*f\nAverage = %.*f\nPercentage = %.*f %%\n", numberofdecimals, sum, numberofdecimals, (sum/(sizeof(vet)/sizeof(int))), numberofdecimals, (sum/((sizeof(vet)/sizeof(int)) * 100)) * 100);
+  printf("\nTotal = %.*f\nAverage = %.*f\nPercentage = %.*f %%\n",\
+   numberofdecimals, sum, numberofdecimals, \
+   (sum/(sizeof(vet)/sizeof(int))), numberofdecimals,\
+    (sum/((sizeof(vet)/sizeof(int)) * 100)) * 100);
   return 0;
 }
