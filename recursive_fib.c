@@ -1,27 +1,25 @@
 #include <stdio.h>
+#include <assert.h>
 
-int check(int upto)
+long long check(int n, long long a, long long b)
 {
-  if (upto <= 2){
-    return 1;
-  }
-  int z = (upto - 1);
-  int x = (upto - 2);
-  
-  return check(z) + check(x);
+    if (n == 0)
+    {
+      return a;
+    }
+    if (n == 1)
+    {
+      return b;
+    }
+    return check(n-1, b, a+b);
 }
 
 int main()
 {
-  int upto = 0;
-  printf("Enter an integer:\n");
+  int upto;
+  printf("Enter an integer: ");
   scanf("%d", &upto);
-  if(upto <= 0)
-  {
-    printf("Nth Fibonacci number is 0\n");
-    return 0;
-  }
   
-  printf("Nth Fibonacci number is %d\n", check(upto));
+  printf("Nth Fibonacci number is %lld\n", check(upto, 0, 1));
   return 0;
 }
